@@ -10,8 +10,8 @@ so the cleaning step has something to fix:
   - zero or negative prices
   - inconsistent text (extra spaces, mixed case) in product and country names
 
-Run:  python data/generate_data.py
-Output: data/online_retail_simulated.csv
+Run:  python generate_data.py
+Output: retail_simulated.csv
 """
 from pathlib import Path
 
@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 
 rng = np.random.default_rng(42)
-OUT = Path(__file__).parent / "online_retail_simulated.csv"
+OUT = Path(__file__).parent / "retail_simulated.csv"
 
 N_CUSTOMERS = 3_000
 START, END = pd.Timestamp("2024-01-01"), pd.Timestamp("2025-12-31")
